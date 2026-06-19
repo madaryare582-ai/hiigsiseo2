@@ -143,3 +143,45 @@
     background-position: 100% 50%;
   }
 }
+
+@utility animate-flow-x {
+  animation: flow-x 3s ease-in-out infinite;
+}
+
+@keyframes flow-x {
+  0% {
+    left: 0%;
+    opacity: 0;
+  }
+  10% {
+    opacity: 1;
+  }
+  90% {
+    opacity: 1;
+  }
+  100% {
+    left: 100%;
+    opacity: 0;
+  }
+}
+
+@utility animate-flow-y {
+  animation: flow-y 3s ease-in-out infinite;
+}
+
+@keyframes flow-y {
+  0% {
+    top: 0%;
+    opacity: 0;
+  }
+  10% {
+    opacity: 1;
+  }
+  90% {
+    opacity: 1;
+  }
+  100% {
+    top: 100%;
+    opacity: 0;
+  }
+}

@@ -77,6 +77,12 @@ export function HowItWorks() {
           aria-hidden
           className="absolute top-9 right-[12.5%] left-[12.5%] h-[3px] -translate-y-1/2 rounded-full bg-gradient-to-r from-indigo-500/50 via-purple-500 to-purple-400 shadow-[0_0_16px_2px_rgba(168,85,247,0.45)]"
         />
+        <div
+          aria-hidden
+          className="absolute top-9 right-[12.5%] left-[12.5%] h-0"
+        >
+          <span className="animate-flow-x absolute top-0 -translate-x-1/2 -translate-y-1/2 size-3 rounded-full bg-white shadow-[0_0_14px_4px_rgba(216,180,254,0.9)]" />
+        </div>
 
         {[25, 50, 75].map((left, i) => (
           <ChevronRight
@@ -93,10 +99,18 @@ export function HowItWorks() {
               key={step.number}
               className="group relative flex flex-col items-center text-center"
             >
-              <span
-                className={`relative z-10 flex size-[4.5rem] items-center justify-center rounded-full border border-white/10 bg-gradient-to-br from-indigo-500 to-purple-600 shadow-lg ring-[6px] ring-background transition-transform duration-500 group-hover:scale-110 ${stepGlow[index]}`}
-              >
-                <step.icon className="size-7 text-white" />
+              <span className="relative flex size-[4.5rem] items-center justify-center">
+                {index === 0 && (
+                  <span
+                    aria-hidden
+                    className="absolute inset-0 animate-ping rounded-full bg-indigo-400/40"
+                  />
+                )}
+                <span
+                  className={`relative z-10 flex size-[4.5rem] items-center justify-center rounded-full border border-white/10 bg-gradient-to-br from-indigo-500 to-purple-600 shadow-lg ring-[6px] ring-background transition-transform duration-500 group-hover:scale-110 ${stepGlow[index]}`}
+                >
+                  <step.icon className="size-7 text-white" />
+                </span>
               </span>
               <span className="mt-4 font-mono text-xs font-semibold tracking-widest text-indigo-300">
                 STEP {step.number}
@@ -118,13 +132,24 @@ export function HowItWorks() {
           aria-hidden
           className="absolute top-2 bottom-2 left-9 w-[3px] rounded-full bg-gradient-to-b from-indigo-500/70 via-purple-500/50 to-purple-400/20 shadow-[0_0_12px_1px_rgba(168,85,247,0.35)]"
         />
+        <div aria-hidden className="absolute top-2 bottom-2 left-9 w-0">
+          <span className="animate-flow-y absolute left-0 -translate-x-1/2 -translate-y-1/2 size-3 rounded-full bg-white shadow-[0_0_14px_4px_rgba(216,180,254,0.9)]" />
+        </div>
         <div className="flex flex-col gap-10">
           {steps.map((step, index) => (
             <div key={step.number} className="relative flex gap-6">
-              <span
-                className={`relative z-10 flex size-[4.5rem] shrink-0 items-center justify-center rounded-full border border-white/10 bg-gradient-to-br from-indigo-500 to-purple-600 shadow-lg ring-[6px] ring-background ${stepGlow[index]}`}
-              >
-                <step.icon className="size-7 text-white" />
+              <span className="relative flex size-[4.5rem] shrink-0 items-center justify-center">
+                {index === 0 && (
+                  <span
+                    aria-hidden
+                    className="absolute inset-0 animate-ping rounded-full bg-indigo-400/40"
+                  />
+                )}
+                <span
+                  className={`relative z-10 flex size-[4.5rem] items-center justify-center rounded-full border border-white/10 bg-gradient-to-br from-indigo-500 to-purple-600 shadow-lg ring-[6px] ring-background ${stepGlow[index]}`}
+                >
+                  <step.icon className="size-7 text-white" />
+                </span>
               </span>
               <div className="pt-2">
                 <span className="font-mono text-xs font-semibold tracking-widest text-indigo-300">

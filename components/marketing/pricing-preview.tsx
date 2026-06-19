@@ -92,8 +92,8 @@ export function PricingPreview() {
             className={cn(
               "group relative flex flex-col overflow-hidden border bg-white/5 [--card-spacing:--spacing(8)] ring-0 backdrop-blur-2xl backdrop-saturate-150 transition-all duration-500",
               plan.featured
-                ? "z-10 border-2 border-indigo-400/50 bg-gradient-to-b from-indigo-500/15 via-purple-600/10 to-transparent shadow-[inset_0_1px_0_0_rgba(255,255,255,0.08),0_25px_60px_-15px_rgba(99,102,241,0.5)] sm:-translate-y-4 sm:scale-105 lg:scale-110 hover:-translate-y-5 hover:shadow-[inset_0_1px_0_0_rgba(255,255,255,0.12),0_30px_70px_-15px_rgba(99,102,241,0.7)]"
-                : "border-white/10 shadow-[inset_0_1px_0_0_rgba(255,255,255,0.06)] hover:-translate-y-2 hover:border-white/20 hover:bg-white/8 hover:shadow-[inset_0_1px_0_0_rgba(255,255,255,0.08),0_20px_40px_-15px_rgba(0,0,0,0.5)]"
+                ? "z-10 border-2 border-indigo-400/50 bg-gradient-to-b from-indigo-500/15 via-purple-600/10 to-transparent shadow-[inset_0_1px_0_0_rgba(255,255,255,0.08),0_25px_60px_-15px_rgba(99,102,241,0.5)] sm:-translate-y-4 sm:scale-105 lg:scale-110 hover:-translate-y-5 hover:scale-[1.12] hover:shadow-[inset_0_1px_0_0_rgba(255,255,255,0.12),0_35px_80px_-15px_rgba(99,102,241,0.75)]"
+                : "border-white/10 shadow-[inset_0_1px_0_0_rgba(255,255,255,0.06)] hover:-translate-y-2 hover:scale-[1.02] hover:border-white/20 hover:bg-white/8 hover:shadow-[inset_0_1px_0_0_rgba(255,255,255,0.08),0_20px_40px_-15px_rgba(0,0,0,0.5)]"
             )}
           >
             {plan.featured && (

@@ -83,15 +83,19 @@ export function Features() {
         {features.map((feature, index) => (
           <Card
             key={feature.title}
-            className="group relative flex min-h-[19rem] flex-col overflow-hidden border border-white/10 bg-white/5 [--card-spacing:--spacing(9)] ring-0 shadow-[inset_0_1px_0_0_rgba(255,255,255,0.06)] backdrop-blur-2xl backdrop-saturate-150 transition-all duration-500 hover:-translate-y-2 hover:border-indigo-400/40 hover:bg-white/8 hover:shadow-[inset_0_1px_0_0_rgba(255,255,255,0.1),0_25px_50px_-12px_rgba(49,46,129,0.5)]"
+            className="group relative flex min-h-[19rem] flex-col overflow-hidden border border-white/10 bg-white/5 [--card-spacing:--spacing(9)] ring-0 shadow-[inset_0_1px_0_0_rgba(255,255,255,0.06)] backdrop-blur-2xl backdrop-saturate-150 transition-all duration-500 hover:-translate-y-2 hover:scale-[1.01] hover:border-indigo-400/40 hover:bg-white/8 hover:shadow-[inset_0_1px_0_0_rgba(255,255,255,0.1),0_25px_50px_-12px_rgba(99,102,241,0.45)]"
           >
+            <div
+              aria-hidden
+              className="pointer-events-none absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-indigo-400/0 to-transparent transition-colors duration-500 group-hover:via-indigo-400/60"
+            />
             <div
               aria-hidden
               className="pointer-events-none absolute -top-10 -right-10 size-40 rounded-full bg-gradient-to-br from-indigo-500/0 to-purple-600/0 opacity-0 blur-2xl transition-opacity duration-500 group-hover:from-indigo-500/20 group-hover:to-purple-600/20 group-hover:opacity-100"
             />
             <CardHeader className="relative flex flex-1 flex-col gap-0">
               <div className="flex items-center justify-between">
-                <span className="flex size-16 items-center justify-center rounded-2xl bg-gradient-to-br from-indigo-500 to-purple-600 shadow-lg shadow-indigo-950/40 ring-1 ring-white/15 transition-all duration-500 group-hover:scale-110 group-hover:rotate-3 group-hover:shadow-indigo-500/40">
+                <span className="flex size-16 items-center justify-center rounded-2xl bg-gradient-to-br from-indigo-500 via-purple-500 to-fuchsia-500 shadow-lg shadow-indigo-950/40 ring-1 ring-white/15 transition-all duration-500 group-hover:scale-110 group-hover:rotate-3 group-hover:shadow-indigo-500/40">
                   <feature.icon className="size-8 text-white" />
                 </span>
                 <span className="font-mono text-sm text-white/10">
